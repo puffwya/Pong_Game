@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wyatt Puff Pong</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <button id="homeButton" onclick="goHome()" style="display: none;">Back</button>
+  <h1>Wyatt Puff Pong (C++ & WASM)</h1>
+
+  <div id="menu">
+    <button id="pvpBtn">Player vs Player</button>
+    <button id="pveBtn">Player vs Computer</button>
+    <select id="difficultySelect">
+      <option value="easy">Easy</option>
+      <option value="medium" selected>Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <br/>
+    <label for="maxScoreSelect">Play to:</label>
+    <select id="maxScoreSelect">
+      <option value="3">3</option>
+      <option value="5" selected>5</option>
+      <option value="10">10</option>
+    </select>
+  </div>
+
+  <div id="gameOverPopup" class="popup hidden">
+    <div class="popup-content">
+      <h2 id="winnerText"></h2>
+      <button id="resetGameBtn">Play Again</button>
+    </div>
+  </div>
+
+  <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+
+  <script src="pong.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
+
